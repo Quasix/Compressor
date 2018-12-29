@@ -67,6 +67,16 @@ class ImageUtil {
         } else if (orientation == 8) {
             matrix.postRotate(270);
         }
+
+        double widthRatio = (double) reqWidth / options.outWidth;
+        double heightRatio = (double) reqHeight / options.outHeight;
+
+        double ratio = (widthRatio < heightRatio)
+                ? widthRatio
+                : heightRatio;
+
+        matrix.postScale((float) ratio, (float) ratio);
+
         scaledBitmap = Bitmap.createBitmap(scaledBitmap, 0, 0, scaledBitmap.getWidth(), scaledBitmap.getHeight(), matrix, true);
         return scaledBitmap;
     }
