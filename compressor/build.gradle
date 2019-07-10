@@ -79,8 +79,9 @@ android {
     }
 }
 
-apply from: 'https://raw.githubusercontent.com/zetbaitsu/JCenter/master/installv1.gradle'
-apply from: 'https://raw.githubusercontent.com/zetbaitsu/JCenter/master/bintrayv1.gradle'
+// TODO spyne These scripts are breaking the build. Need to investigate.
+//apply from: 'https://raw.githubusercontent.com/zetbaitsu/JCenter/master/installv1.gradle'
+//apply from: 'https://raw.githubusercontent.com/zetbaitsu/JCenter/master/bintrayv1.gradle'
 
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
